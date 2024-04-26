@@ -18,6 +18,9 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Skip validation
+        run: touch .env && echo SKIP_ENV_VALIDATION="true" >> .env
+
       - name: Install pnpm
         run: npm install -g pnpm@8.10.2 
 
